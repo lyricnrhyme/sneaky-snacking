@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KittenMovement : MonoBehaviour {
     public int moveSpeed;
     public float maxPos;
+    public Text pointsText;
 
     // Start is called before the first frame update
     void Start () {
@@ -24,5 +26,11 @@ public class KittenMovement : MonoBehaviour {
         }
         float xPos = Mathf.Clamp (transform.position.x, -maxPos, maxPos);
         transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
+    }
+
+    void OnCollisionEnter2D (Collision2D other) {
+        GameManagement.points++;
+        pointsText.text = "Points: " + GameManagement.points;
+        Destroy (other.gameObject);
     }
 }
