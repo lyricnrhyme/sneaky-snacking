@@ -21,7 +21,9 @@ public class ItemSpawner : MonoBehaviour {
         Instantiate (snack, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
 
         yield return new WaitForSeconds (2f);
-        StartCoroutine (SpawnItem ());
+        if (!GameManagement.gameOver) {
+            StartCoroutine (SpawnItem ());
+        }
 
     }
 }

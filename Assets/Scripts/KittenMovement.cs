@@ -15,7 +15,9 @@ public class KittenMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        Move ();
+        if (!GameManagement.gameOver) {
+            Move ();
+        }
     }
 
     void Move () {
