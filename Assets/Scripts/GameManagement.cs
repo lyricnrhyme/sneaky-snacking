@@ -6,19 +6,31 @@ using UnityEngine.SceneManagement;
 public class GameManagement : MonoBehaviour {
     public static int points = 0;
     public static int lives = 9;
+    public static int goalPoints = 10;
     public static bool gameOver = false;
     public GameObject pausePanel;
+    public GameObject winPanel;
     bool gamePaused = false;
+    bool gameWin = false;
     // Start is called before the first frame update
-    void Start () {
-
-    }
+    void Start () { }
 
     // Update is called once per frame
     void Update () {
         if ((Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown ("q")) && !gamePaused) {
             PauseGame ();
         }
+
+        if (points >= goalPoints && !gameWin) {
+            WinGame ();
+        }
+
+    }
+
+    public void WinGame () {
+        gameWin = true;
+        winPanel.SetActive (true);
+        Time.timeScale = 0f;
     }
 
     public void RestartGame () {
