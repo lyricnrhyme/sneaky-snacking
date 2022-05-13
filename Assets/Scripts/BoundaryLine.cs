@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class BoundaryLine : MonoBehaviour {
     public Text livesText;
     public GameObject gameOverPanel;
+    GameManagement gameManagement;
+
     // Start is called before the first frame update
     void Start () {
-
+        gameManagement = GameObject.Find ("GameManagement").GetComponent<GameManagement> ();
     }
 
     // Update is called once per frame
@@ -17,10 +19,10 @@ public class BoundaryLine : MonoBehaviour {
     }
 
     void OnCollisionEnter2D (Collision2D other) {
-        GameManagement.lives--;
-        livesText.text = "Lives: " + GameManagement.lives;
-        if (GameManagement.lives <= 0) {
-            GameManagement.gameOver = true;
+        gameManagement.lives--;
+        livesText.text = "Lives: " + gameManagement.lives;
+        if (gameManagement.lives <= 0) {
+            gameManagement.gameOver = true;
             gameOverPanel.SetActive (true);
         }
         Destroy (other.gameObject);
