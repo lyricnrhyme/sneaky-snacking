@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class KittenMovement : MonoBehaviour {
     public int moveSpeed;
     public float maxPos;
-    public Text pointsText;
+    GameManagement gameManagement;
 
     // Start is called before the first frame update
     void Start () {
-
+        gameManagement = GameObject.Find ("GameManagement").GetComponent<GameManagement> ();
     }
 
     // Update is called once per frame
     void Update () {
-        if (!GameManagement.gameOver) {
+        if (!gameManagement.gameOver) {
             Move ();
         }
     }
@@ -31,8 +31,11 @@ public class KittenMovement : MonoBehaviour {
     }
 
     void OnCollisionEnter2D (Collision2D other) {
-        GameManagement.points++;
-        pointsText.text = "Points: " + GameManagement.points;
+        gameManagement.points++;
+        gameManagement.UpdatePointsText ();
+        if (gameManagement.points >= gameManagement.goalPoints) {
+            gameManagement.Win ();
+        }
         Destroy (other.gameObject);
     }
 }
