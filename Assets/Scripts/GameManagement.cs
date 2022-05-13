@@ -16,6 +16,7 @@ public class GameManagement : MonoBehaviour {
     public int basePoints = 10;
     public int goalPoints;
     bool gamePaused = false;
+    bool gameWin = false;
     // Start is called before the first frame update
     void Start () {
         Time.timeScale = 1f;
@@ -27,6 +28,17 @@ public class GameManagement : MonoBehaviour {
         if ((Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown ("q")) && !gamePaused) {
             PauseGame ();
         }
+
+        if (points >= goalPoints && !gameWin) {
+            WinGame ();
+        }
+
+    }
+
+    public void WinGame () {
+        gameWin = true;
+        winPanel.SetActive (true);
+        Time.timeScale = 0f;
     }
 
     void ResetGame () {
