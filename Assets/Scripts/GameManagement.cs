@@ -112,4 +112,9 @@ public class GameManagement : MonoBehaviour {
         lives--;
         livesText.text = "Lives: " + lives;
     }
+
+    public void AddLife () {
+        lives++;
+        livesText.text = "Lives: " + lives;
+    }
 }
