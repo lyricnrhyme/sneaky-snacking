@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8806582297075219199}
   - component: {fileID: 5975721591321454501}
   m_Layer: 0
-  m_Name: Snack
-  m_TagString: Snack
+  m_Name: Bread
+  m_TagString: Bread
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
-  m_Color: {r: 0.27144888, g: 0.6345494, b: 0.9433962, a: 1}
+  m_Color: {r: 1, g: 0.8792684, b: 0.7122642, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

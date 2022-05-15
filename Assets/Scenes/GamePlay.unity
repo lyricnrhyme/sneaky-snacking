@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 377491190}
   m_Layer: 0
   m_Name: Kitten
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2565,6 +2565,7 @@ MonoBehaviour:
   winPanel: {fileID: 338526609}
   pointsText: {fileID: 1803058211}
   levelText: {fileID: 2135116158}
+  livesText: {fileID: 1131123616}
   currentLevel: 1
   basePoints: 10
   goalPoints: 0
@@ -3185,6 +3186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snack: {fileID: 8806582297075219198, guid: 89165ae92ba584c97ad4a878b4a5e805, type: 3}
+  obstacle: {fileID: 8806582297075219198, guid: b16503fbcfc1d4831bbcfa4d9c1b5412, type: 3}
+  bread: {fileID: 8806582297075219198, guid: 6cb5aa9fa1fda4e748a01ef631d0d1b3, type: 3}
+  catnip: {fileID: 8806582297075219198, guid: bea7b6981f3a44ffcac2d84edf59322b, type: 3}
+  treat: {fileID: 8806582297075219198, guid: cdb8189addd2c467d99830d84111b8ad, type: 3}
   maxPos: 6.75
 --- !u!4 &2116066913
 Transform:

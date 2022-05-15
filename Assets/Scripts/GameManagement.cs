@@ -13,6 +13,7 @@ public class GameManagement : MonoBehaviour {
     public GameObject winPanel;
     public Text pointsText;
     public Text levelText;
+    public Text livesText;
     public int currentLevel = 1;
     public int basePoints = 10;
     public int goalPoints;
@@ -105,5 +106,10 @@ public class GameManagement : MonoBehaviour {
         Time.timeScale = 1f;
         UpdateLevelText ();
         UpdatePointsText ();
+    }
+
+    public void ReduceLife () {
+        lives--;
+        livesText.text = "Lives: " + lives;
     }
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour {
     public GameObject snack;
+    public GameObject obstacle;
+    public GameObject bread;
+    public GameObject catnip;
+    public GameObject treat;
     public float maxPos;
     GameManagement gameManagement;
 
@@ -20,7 +24,17 @@ public class ItemSpawner : MonoBehaviour {
 
     IEnumerator SpawnItem () {
         float xPos = Random.Range (-maxPos, maxPos);
-        Instantiate (snack, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+        int randomNum = Random.Range (0, 100);
+        if (randomNum < 5) {
+            Instantiate (treat, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+        } else if (randomNum >= 5 && randomNum < 20) {
+            // create random bread or catnip
+            Instantiate (bread, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+        } else if (randomNum >= 20 && randomNum < 50) {
+            Instantiate (obstacle, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+        } else {
+            Instantiate (snack, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+        }
 
         yield return new WaitForSeconds (2f);
         if (!gameManagement.gameOver) {

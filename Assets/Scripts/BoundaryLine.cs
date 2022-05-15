@@ -19,8 +19,9 @@ public class BoundaryLine : MonoBehaviour {
     }
 
     void OnCollisionEnter2D (Collision2D other) {
-        gameManagement.lives--;
-        livesText.text = "Lives: " + gameManagement.lives;
+        if (other.gameObject.tag == "Snack") {
+            gameManagement.ReduceLife ();
+        }
         if (gameManagement.lives <= 0) {
             gameManagement.GameOver ();
         }
