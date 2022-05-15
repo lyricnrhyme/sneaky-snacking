@@ -34,21 +34,21 @@ public class KittenMovement : MonoBehaviour {
     }
 
     void OnCollisionEnter2D (Collision2D other) {
-        if (other.gameObject.tag == "Snack") {
+        if (other.gameObject.tag == Constants.SNACK_TAG) {
             gameManagement.points++;
             gameManagement.UpdatePointsText ();
-        } else if (other.gameObject.tag == "Obstacle") {
+        } else if (other.gameObject.tag == Constants.OBSTACLE_TAG) {
             gameManagement.ReduceLife ();
-        } else if (other.gameObject.tag == "Bread") {
+        } else if (other.gameObject.tag == Constants.BREAD_TAG) {
             StartCoroutine (ReduceSpeed ());
-        } else if (other.gameObject.tag == "Catnip") {
+        } else if (other.gameObject.tag == Constants.CATNIP_TAG) {
             int catnipEffectIdx = Random.Range (0, 2);
             if (catnipEffectIdx == 0) {
                 StartCoroutine (DoubleSpeed ());
             } else {
                 StartCoroutine (InvertControls ());
             }
-        } else if (other.gameObject.tag == "Treat") {
+        } else if (other.gameObject.tag == Constants.TREAT_TAG) {
             gameManagement.AddLife ();
         }
         if (gameManagement.points >= gameManagement.goalPoints) {
