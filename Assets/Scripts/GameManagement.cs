@@ -9,6 +9,7 @@ public class GameManagement : MonoBehaviour {
     public int lives = 9;
     public bool gameOver = false;
     public GameObject pausePanel;
+    public GameObject gameOverPanel;
     public GameObject winPanel;
     public Text pointsText;
     public Text levelText;
@@ -45,6 +46,7 @@ public class GameManagement : MonoBehaviour {
         points = 0;
         lives = 9;
         gameOver = false;
+        gameOverPanel.SetActive (false);
     }
 
     void RestartGame () {
@@ -69,9 +71,22 @@ public class GameManagement : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
+    void UpdateOverallPoints () {
+        int overallPoints = PlayerPrefs.GetInt ("OverallPoints", 0);
+        PlayerPrefs.SetInt ("OverallPoints", overallPoints + points);
+    }
+
+    public void GameOver () {
+        gameOver = true;
+        Time.timeScale = 0f;
+        gameOverPanel.SetActive (true);
+        UpdateOverallPoints ();
+    }
+
     public void Win () {
         winPanel.SetActive (true);
         Time.timeScale = 0f;
+        UpdateOverallPoints ();
     }
 
     public void UpdatePointsText () {

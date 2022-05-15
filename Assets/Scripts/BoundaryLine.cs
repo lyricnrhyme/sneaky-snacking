@@ -22,8 +22,7 @@ public class BoundaryLine : MonoBehaviour {
         gameManagement.lives--;
         livesText.text = "Lives: " + gameManagement.lives;
         if (gameManagement.lives <= 0) {
-            gameManagement.gameOver = true;
-            gameOverPanel.SetActive (true);
+            gameManagement.GameOver ();
         }
         Destroy (other.gameObject);
     }
