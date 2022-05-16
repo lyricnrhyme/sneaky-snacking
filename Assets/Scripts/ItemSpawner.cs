@@ -7,7 +7,11 @@ public class ItemSpawner : MonoBehaviour {
     public GameObject obstacle;
     public GameObject[] effects;
     public GameObject treat;
+    public GameObject hidingKitten;
+    public GameObject kitten;
+    public string[] tags;
     public float maxPos;
+    bool isHiding = false;
     GameManagement gameManagement;
 
     // Start is called before the first frame update
@@ -18,10 +22,24 @@ public class ItemSpawner : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
+        Hide ();
     }
 
-    IEnumerator SpawnItem () {
+    void Hide () {
+        if (Input.GetKeyDown ("w") || Input.GetKeyDown ("up")) {
+            isHiding = true;
+            hidingKitten.SetActive (true);
+            kitten.SetActive (false);
+            DestroyAllItems ();
+        } else if (Input.GetKeyDown ("s") || Input.GetKeyDown ("down")) {
+            isHiding = false;
+            hidingKitten.SetActive (false);
+            kitten.SetActive (true);
+            StartCoroutine (SpawnItem ());
+        }
+    }
+
+    public IEnumerator SpawnItem () {
         float xPos = Random.Range (-maxPos, maxPos);
         int randomNum = Random.Range (0, 100);
         if (randomNum < 5) {
@@ -36,9 +54,18 @@ public class ItemSpawner : MonoBehaviour {
         }
 
         yield return new WaitForSeconds (1f);
-        if (!gameManagement.gameOver) {
+        if (!gameManagement.gameOver && !isHiding) {
             StartCoroutine (SpawnItem ());
         }
 
+    }
+
+    void DestroyAllItems () {
+        foreach (string tag in tags) {
+            GameObject[] items = GameObject.FindGameObjectsWithTag (tag);
+            foreach (GameObject item in items) {
+                Destroy (item);
+            }
+        }
     }
 }

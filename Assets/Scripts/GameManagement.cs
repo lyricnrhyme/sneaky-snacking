@@ -19,6 +19,7 @@ public class GameManagement : MonoBehaviour {
     public int goalPoints;
     bool gamePaused = false;
     bool gameWin = false;
+    public GameObject hidingKitten;
     // Start is called before the first frame update
     void Start () {
         Time.timeScale = 1f;
