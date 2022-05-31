@@ -35,8 +35,7 @@ public class KittenMovement : MonoBehaviour {
 
     void OnCollisionEnter2D (Collision2D other) {
         if (other.gameObject.tag == Constants.SNACK_TAG) {
-            gameManagement.points++;
-            gameManagement.UpdatePointsText ();
+            gameManagement.UpdatePoints ();
         } else if (other.gameObject.tag == Constants.OBSTACLE_TAG) {
             gameManagement.ReduceLife ();
         } else if (other.gameObject.tag == Constants.BREAD_TAG) {

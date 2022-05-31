@@ -8,22 +8,20 @@ public class GameManagement : MonoBehaviour {
     public int points = 0;
     public int lives = 9;
     public bool gameOver = false;
-    public GameObject pausePanel;
-    public GameObject gameOverPanel;
-    public GameObject winPanel;
-    public Text pointsText;
-    public Text levelText;
-    public Text livesText;
     public int currentLevel = 1;
     public int basePoints = 10;
     public int goalPoints;
     bool gamePaused = false;
     bool gameWin = false;
     public GameObject hidingKitten;
+    public GameObject dogWarning;
+    UIHandler uiHandler;
     // Start is called before the first frame update
     void Start () {
         Time.timeScale = 1f;
         goalPoints = currentLevel * basePoints;
+        StartCoroutine (DogWarning ());
+        uiHandler = GetComponent<UIHandler> ();
     }
 
     // Update is called once per frame
@@ -40,7 +38,7 @@ public class GameManagement : MonoBehaviour {
 
     public void WinGame () {
         gameWin = true;
-        winPanel.SetActive (true);
+        uiHandler.winPanel.SetActive (true);
         Time.timeScale = 0f;
     }
 
@@ -48,7 +46,7 @@ public class GameManagement : MonoBehaviour {
         points = 0;
         lives = 9;
         gameOver = false;
-        gameOverPanel.SetActive (false);
+        uiHandler.gameOverPanel.SetActive (false);
     }
 
     void RestartGame () {
@@ -62,13 +60,13 @@ public class GameManagement : MonoBehaviour {
     }
 
     void PauseGame () {
-        pausePanel.SetActive (true);
+        uiHandler.pausePanel.SetActive (true);
         gamePaused = true;
         Time.timeScale = 0f;
     }
 
     void ResumeGame () {
-        pausePanel.SetActive (false);
+        uiHandler.pausePanel.SetActive (false);
         gamePaused = false;
         Time.timeScale = 1f;
     }
@@ -81,41 +79,46 @@ public class GameManagement : MonoBehaviour {
     public void GameOver () {
         gameOver = true;
         Time.timeScale = 0f;
-        gameOverPanel.SetActive (true);
+        uiHandler.gameOverPanel.SetActive (true);
         UpdateOverallPoints ();
     }
 
     public void Win () {
-        winPanel.SetActive (true);
+        uiHandler.winPanel.SetActive (true);
         Time.timeScale = 0f;
         UpdateOverallPoints ();
-    }
-
-    public void UpdatePointsText () {
-        pointsText.text = "Points: " + points + "/" + goalPoints;
-    }
-
-    void UpdateLevelText () {
-        levelText.text = "Level: " + currentLevel;
     }
 
     public void ContinueGame () {
         currentLevel++;
         points = 0;
         goalPoints = currentLevel * basePoints;
-        winPanel.SetActive (false);
+        uiHandler.winPanel.SetActive (false);
         Time.timeScale = 1f;
-        UpdateLevelText ();
-        UpdatePointsText ();
+        uiHandler.UpdateLevelText (currentLevel);
+        uiHandler.UpdatePointsText (points, goalPoints);
     }
 
     public void ReduceLife () {
         lives--;
-        livesText.text = "Lives: " + lives;
+        uiHandler.UpdateLivesText (lives);
     }
 
     public void AddLife () {
         lives++;
-        livesText.text = "Lives: " + lives;
+        uiHandler.UpdateLivesText (lives);
+    }
+
+    public void UpdatePoints () {
+        points++;
+        uiHandler.UpdatePointsText (points, goalPoints);
+    }
+
+    IEnumerator DogWarning () {
+        yield return new WaitForSeconds (30f);
+        dogWarning.SetActive (true);
+        if (!gameOver) {
+            StartCoroutine (DogWarning ());
+        }
     }
 }

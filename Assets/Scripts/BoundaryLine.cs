@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class BoundaryLine : MonoBehaviour {
-    public Text livesText;
-    public GameObject gameOverPanel;
     GameManagement gameManagement;
 
     // Start is called before the first frame update
