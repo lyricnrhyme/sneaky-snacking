@@ -39,6 +39,7 @@ public class GameManagement : MonoBehaviour {
     public void WinGame () {
         gameWin = true;
         uiHandler.winPanel.SetActive (true);
+        dogWarning.SetActive (false);
         Time.timeScale = 0f;
     }
 
