@@ -10,7 +10,7 @@ public class DogWarning : MonoBehaviour {
     }
 
     IEnumerator ShowDog () {
-        yield return new WaitForSeconds (5f);
+        yield return new WaitForSeconds (3f);
         dog.SetActive (true);
         gameObject.SetActive (false);
     }

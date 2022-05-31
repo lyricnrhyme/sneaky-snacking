@@ -116,7 +116,7 @@ public class GameManagement : MonoBehaviour {
     }
 
     IEnumerator DogWarning () {
-        yield return new WaitForSeconds (30f);
+        yield return new WaitForSeconds (15f);
         dogWarning.SetActive (true);
         if (!gameOver) {
             StartCoroutine (DogWarning ());

@@ -7,6 +7,7 @@ public class KittenMovement : MonoBehaviour {
     int moveSpeed = 15;
     bool invertedControls = false;
     public float maxPos;
+    public bool isHiding;
     GameManagement gameManagement;
 
     // Start is called before the first frame update
@@ -16,7 +17,7 @@ public class KittenMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (!gameManagement.gameOver) {
+        if (!gameManagement.gameOver && !isHiding) {
             Move ();
         }
     }
