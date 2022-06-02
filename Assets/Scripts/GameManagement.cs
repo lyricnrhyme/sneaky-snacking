@@ -15,12 +15,15 @@ public class GameManagement : MonoBehaviour {
     bool gameWin = false;
     public GameObject hidingKitten;
     public GameObject dogWarning;
+    public GameObject humanWarning;
+
     UIHandler uiHandler;
     // Start is called before the first frame update
     void Start () {
         Time.timeScale = 1f;
         goalPoints = currentLevel * basePoints;
         StartCoroutine (DogWarning ());
+        StartCoroutine(HumanWarning());
         uiHandler = GetComponent<UIHandler> ();
     }
 
@@ -40,6 +43,7 @@ public class GameManagement : MonoBehaviour {
         gameWin = true;
         uiHandler.winPanel.SetActive (true);
         dogWarning.SetActive (false);
+        humanWarning.SetActive(false);
         Time.timeScale = 0f;
     }
 
@@ -120,6 +124,14 @@ public class GameManagement : MonoBehaviour {
         dogWarning.SetActive (true);
         if (!gameOver) {
             StartCoroutine (DogWarning ());
+        }
+    }
+
+    IEnumerator HumanWarning() {
+        yield return new WaitForSeconds(40f);
+        humanWarning.SetActive(true);
+        if (!gameOver) {
+            StartCoroutine(HumanWarning());
         }
     }
 }
