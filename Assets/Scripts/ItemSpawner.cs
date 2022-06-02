@@ -7,8 +7,6 @@ public class ItemSpawner : MonoBehaviour {
     public GameObject obstacle;
     public GameObject[] effects;
     public GameObject treat;
-    public GameObject hidingKitten;
-    public GameObject kitten;
     public string[] tags;
     public float maxPos;
     GameManagement gameManagement;
@@ -19,23 +17,6 @@ public class ItemSpawner : MonoBehaviour {
         gameManagement = GameObject.Find ("GameManagement").GetComponent<GameManagement> ();
         kittenMovement = GameObject.Find ("Kitten").GetComponent<KittenMovement> ();
         StartCoroutine (SpawnItem ());
-    }
-
-    // Update is called once per frame
-    void Update () {
-        Hide ();
-    }
-
-    void Hide () {
-        if (Input.GetKeyDown ("w") || Input.GetKeyDown ("up")) {
-            kittenMovement.isHiding = true;
-            kitten.transform.position = new Vector3 (6.86f, -1.21f, 0f);
-            DestroyAllItems ();
-        } else if (Input.GetKeyDown ("s") || Input.GetKeyDown ("down")) {
-            kittenMovement.isHiding = false;
-            kitten.transform.position = new Vector3 (0f, -3.2118f, 0f);
-            StartCoroutine (SpawnItem ());
-        }
     }
 
     public IEnumerator SpawnItem () {
@@ -59,7 +40,7 @@ public class ItemSpawner : MonoBehaviour {
 
     }
 
-    void DestroyAllItems () {
+    public void DestroyAllItems () {
         foreach (string tag in tags) {
             GameObject[] items = GameObject.FindGameObjectsWithTag (tag);
             foreach (GameObject item in items) {

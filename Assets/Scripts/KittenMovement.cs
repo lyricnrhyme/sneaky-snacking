@@ -9,16 +9,34 @@ public class KittenMovement : MonoBehaviour {
     public float maxPos;
     public bool isHiding;
     GameManagement gameManagement;
+    ItemSpawner itemSpawner;
+    public GameObject kitten;
 
     // Start is called before the first frame update
     void Start () {
         gameManagement = GameObject.Find ("GameManagement").GetComponent<GameManagement> ();
+        itemSpawner = GameObject.Find ("ItemSpawner").GetComponent<ItemSpawner> ();
     }
 
     // Update is called once per frame
     void Update () {
-        if (!gameManagement.gameOver && !isHiding) {
-            Move ();
+        if (!gameManagement.gameOver) {
+            if (!isHiding) {
+                Move ();
+            }
+            Hide();
+        }
+    }
+
+    void Hide() {
+        if (Input.GetKeyDown ("w") || Input.GetKeyDown ("up")) {
+            isHiding = true;
+            kitten.transform.position = new Vector3 (6.86f, -1.21f, 0f);
+            itemSpawner.DestroyAllItems ();
+        } else if (Input.GetKeyDown ("s") || Input.GetKeyDown ("down")) {
+            isHiding = false;
+            kitten.transform.position = new Vector3 (0f, -3.2118f, 0f);
+            StartCoroutine (itemSpawner.SpawnItem ());
         }
     }
 
