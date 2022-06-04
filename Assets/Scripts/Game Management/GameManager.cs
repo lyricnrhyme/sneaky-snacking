@@ -121,16 +121,12 @@ public class GameManager : MonoBehaviour {
     IEnumerator DogWarning () {
         yield return new WaitForSeconds (15f);
         dogWarning.SetActive (true);
-        if (!gameOver) {
-            StartCoroutine (DogWarning ());
-        }
+        if (!gameOver) StartCoroutine (DogWarning ());
     }
 
     IEnumerator HumanWarning() {
         yield return new WaitForSeconds(40f);
         humanWarning.SetActive(true);
-        if (!gameOver) {
-            StartCoroutine(HumanWarning());
-        }
+        if (!gameOver) StartCoroutine(HumanWarning());
     }
 }

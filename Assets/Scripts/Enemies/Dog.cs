@@ -9,7 +9,8 @@ public class Dog : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (!kittenMovement.isHiding) {
+        if (!kittenMovement.isHiding && !gameManager.gameOver) {
+            Debug.Log("DOG");
             gameManager.GameOver ();
         }
     }

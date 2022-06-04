@@ -21,6 +21,7 @@ public class BoundaryLine : MonoBehaviour {
             gameManager.ReduceLife ();
         }
         if (gameManager.lives <= 0) {
+            Debug.Log("BOUNDARY");
             gameManager.GameOver ();
         }
         Destroy (other.gameObject);
