@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManagement : MonoBehaviour {
+public class GameManager : MonoBehaviour {
+    [HideInInspector]
     public int points = 0;
     public int lives = 9;
     public bool gameOver = false;
@@ -13,18 +14,17 @@ public class GameManagement : MonoBehaviour {
     public int goalPoints;
     bool gamePaused = false;
     bool gameWin = false;
-    public GameObject hidingKitten;
     public GameObject dogWarning;
     public GameObject humanWarning;
 
-    UIHandler uiHandler;
+    UIManager uiManager;
     // Start is called before the first frame update
     void Start () {
         Time.timeScale = 1f;
         goalPoints = currentLevel * basePoints;
         StartCoroutine (DogWarning ());
         StartCoroutine(HumanWarning());
-        uiHandler = GetComponent<UIHandler> ();
+        uiManager = GetComponent<UIManager> ();
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class GameManagement : MonoBehaviour {
 
     public void WinGame () {
         gameWin = true;
-        uiHandler.winPanel.SetActive (true);
+        uiManager.winPanel.SetActive (true);
         dogWarning.SetActive (false);
         humanWarning.SetActive(false);
         Time.timeScale = 0f;
@@ -51,27 +51,27 @@ public class GameManagement : MonoBehaviour {
         points = 0;
         lives = 9;
         gameOver = false;
-        uiHandler.gameOverPanel.SetActive (false);
+        uiManager.gameOverPanel.SetActive (false);
     }
 
-    void RestartGame () {
+    public void RestartGame () {
         ResetGame ();
         SceneManager.LoadScene ("GamePlay");
     }
 
-    void NavigateToMainMenu () {
+    public void NavigateToMainMenu () {
         ResetGame ();
         SceneManager.LoadScene ("MainMenu");
     }
 
     void PauseGame () {
-        uiHandler.pausePanel.SetActive (true);
+        uiManager.pausePanel.SetActive (true);
         gamePaused = true;
         Time.timeScale = 0f;
     }
 
-    void ResumeGame () {
-        uiHandler.pausePanel.SetActive (false);
+    public void ResumeGame () {
+        uiManager.pausePanel.SetActive (false);
         gamePaused = false;
         Time.timeScale = 1f;
     }
@@ -84,12 +84,12 @@ public class GameManagement : MonoBehaviour {
     public void GameOver () {
         gameOver = true;
         Time.timeScale = 0f;
-        uiHandler.gameOverPanel.SetActive (true);
+        uiManager.gameOverPanel.SetActive (true);
         UpdateOverallPoints ();
     }
 
     public void Win () {
-        uiHandler.winPanel.SetActive (true);
+        uiManager.winPanel.SetActive (true);
         Time.timeScale = 0f;
         UpdateOverallPoints ();
     }
@@ -98,25 +98,25 @@ public class GameManagement : MonoBehaviour {
         currentLevel++;
         points = 0;
         goalPoints = currentLevel * basePoints;
-        uiHandler.winPanel.SetActive (false);
+        uiManager.winPanel.SetActive (false);
         Time.timeScale = 1f;
-        uiHandler.UpdateLevelText (currentLevel);
-        uiHandler.UpdatePointsText (points, goalPoints);
+        uiManager.UpdateLevelText (currentLevel);
+        uiManager.UpdatePointsText (points, goalPoints);
     }
 
     public void ReduceLife () {
         lives--;
-        uiHandler.UpdateLivesText (lives);
+        uiManager.UpdateLivesText (lives);
     }
 
     public void AddLife () {
         lives++;
-        uiHandler.UpdateLivesText (lives);
+        uiManager.UpdateLivesText (lives);
     }
 
     public void UpdatePoints () {
         points++;
-        uiHandler.UpdatePointsText (points, goalPoints);
+        uiManager.UpdatePointsText (points, goalPoints);
     }
 
     IEnumerator DogWarning () {

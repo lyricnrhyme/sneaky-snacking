@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class BoundaryLine : MonoBehaviour {
-    GameManagement gameManagement;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start () {
-        gameManagement = GameObject.Find ("GameManagement").GetComponent<GameManagement> ();
+        gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
     }
 
     // Update is called once per frame
@@ -18,10 +18,10 @@ public class BoundaryLine : MonoBehaviour {
 
     void OnCollisionEnter2D (Collision2D other) {
         if (other.gameObject.tag == Constants.SNACK_TAG) {
-            gameManagement.ReduceLife ();
+            gameManager.ReduceLife ();
         }
-        if (gameManagement.lives <= 0) {
-            gameManagement.GameOver ();
+        if (gameManager.lives <= 0) {
+            gameManager.GameOver ();
         }
         Destroy (other.gameObject);
     }

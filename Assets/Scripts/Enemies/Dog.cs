@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Dog : MonoBehaviour {
-    GameManagement gameManagement;
+    GameManager gameManager;
     KittenMovement kittenMovement;
     public GameObject kitten;
 
     // Update is called once per frame
     void Update () {
         if (!kittenMovement.isHiding) {
-            gameManagement.GameOver ();
+            gameManager.GameOver ();
         }
     }
 
     private void OnEnable () {
-        gameManagement = GameObject.Find ("GameManagement").GetComponent<GameManagement> ();
+        gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
         kittenMovement = GameObject.Find ("Kitten").GetComponent<KittenMovement> ();
 
         StartCoroutine (Disappear ());

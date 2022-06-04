@@ -8,19 +8,19 @@ public class KittenMovement : MonoBehaviour {
     bool invertedControls = false;
     public float maxPos;
     public bool isHiding;
-    GameManagement gameManagement;
+    GameManager gameManager;
     ItemSpawner itemSpawner;
     public GameObject kitten;
 
     // Start is called before the first frame update
     void Start () {
-        gameManagement = GameObject.Find ("GameManagement").GetComponent<GameManagement> ();
+        gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
         itemSpawner = GameObject.Find ("ItemSpawner").GetComponent<ItemSpawner> ();
     }
 
     // Update is called once per frame
     void Update () {
-        if (!gameManagement.gameOver) {
+        if (!gameManager.gameOver) {
             if (!isHiding) {
                 Move ();
             }
@@ -54,9 +54,9 @@ public class KittenMovement : MonoBehaviour {
 
     void OnCollisionEnter2D (Collision2D other) {
         if (other.gameObject.tag == Constants.SNACK_TAG) {
-            gameManagement.UpdatePoints ();
+            gameManager.UpdatePoints ();
         } else if (other.gameObject.tag == Constants.OBSTACLE_TAG) {
-            gameManagement.ReduceLife ();
+            gameManager.ReduceLife ();
         } else if (other.gameObject.tag == Constants.BREAD_TAG) {
             StartCoroutine (ReduceSpeed ());
         } else if (other.gameObject.tag == Constants.CATNIP_TAG) {
@@ -67,10 +67,10 @@ public class KittenMovement : MonoBehaviour {
                 StartCoroutine (InvertControls ());
             }
         } else if (other.gameObject.tag == Constants.TREAT_TAG) {
-            gameManagement.AddLife ();
+            gameManager.AddLife ();
         }
-        if (gameManagement.points >= gameManagement.goalPoints) {
-            gameManagement.Win ();
+        if (gameManager.points >= gameManager.goalPoints) {
+            gameManager.Win ();
         }
         Destroy (other.gameObject);
     }

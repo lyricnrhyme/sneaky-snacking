@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
-    GameManagement gameManagement;
+    GameManager gameManager;
     KittenMovement kittenMovement;
     public GameObject kitten;
 
@@ -12,12 +12,12 @@ public class Human : MonoBehaviour
     void Update()
     {
         if (!kittenMovement.isHiding) {
-            gameManagement.GameOver();
+            gameManager.GameOver();
         }
     }
 
     private void OnEnable() {
-        gameManagement = GameObject.Find("GameManagement").GetComponent<GameManagement>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         kittenMovement = GameObject.Find("Kitten").GetComponent<KittenMovement>();
 
         StartCoroutine(Disappear());

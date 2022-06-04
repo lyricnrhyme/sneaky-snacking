@@ -9,12 +9,12 @@ public class ItemSpawner : MonoBehaviour {
     public GameObject treat;
     public string[] tags;
     public float maxPos;
-    GameManagement gameManagement;
+    GameManager gameManager;
     KittenMovement kittenMovement;
 
     // Start is called before the first frame update
     void Start () {
-        gameManagement = GameObject.Find ("GameManagement").GetComponent<GameManagement> ();
+        gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
         kittenMovement = GameObject.Find ("Kitten").GetComponent<KittenMovement> ();
         StartCoroutine (SpawnItem ());
     }
@@ -34,7 +34,7 @@ public class ItemSpawner : MonoBehaviour {
         }
 
         yield return new WaitForSeconds (1f);
-        if (!gameManagement.gameOver && !kittenMovement.isHiding) {
+        if (!gameManager.gameOver && !kittenMovement.isHiding) {
             StartCoroutine (SpawnItem ());
         }
 
