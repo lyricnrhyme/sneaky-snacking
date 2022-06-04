@@ -11,17 +11,11 @@ public class BoundaryLine : MonoBehaviour {
         gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
     }
 
-    // Update is called once per frame
-    void Update () {
-
-    }
-
     void OnCollisionEnter2D (Collision2D other) {
         if (other.gameObject.tag == Constants.SNACK_TAG) {
             gameManager.ReduceLife ();
         }
         if (gameManager.lives <= 0) {
-            Debug.Log("BOUNDARY");
             gameManager.GameOver ();
         }
         Destroy (other.gameObject);

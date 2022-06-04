@@ -12,7 +12,6 @@ public class Human : MonoBehaviour
     void Update()
     {
         if (!kittenMovement.isHiding && gameManager.gameOver) {
-            Debug.Log("HUMAN");
             gameManager.GameOver();
         }
     }

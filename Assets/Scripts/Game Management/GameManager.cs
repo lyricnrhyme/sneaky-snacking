@@ -119,13 +119,15 @@ public class GameManager : MonoBehaviour {
     }
 
     IEnumerator DogWarning () {
-        yield return new WaitForSeconds (15f);
+        int randomTime = Random.Range(15, 30);
+        yield return new WaitForSeconds (randomTime);
         dogWarning.SetActive (true);
         if (!gameOver) StartCoroutine (DogWarning ());
     }
 
     IEnumerator HumanWarning() {
-        yield return new WaitForSeconds(40f);
+        int randomTime = Random.Range(50, 60);
+        yield return new WaitForSeconds(randomTime);
         humanWarning.SetActive(true);
         if (!gameOver) StartCoroutine(HumanWarning());
     }
