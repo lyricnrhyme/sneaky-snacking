@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-    [HideInInspector]
     public int points = 0;
     public int lives = 9;
     public bool gameOver = false;

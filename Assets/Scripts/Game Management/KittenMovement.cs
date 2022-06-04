@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class KittenMovement : MonoBehaviour {
     int moveSpeed = 15;
-    bool invertedControls = false;
+    int baseMoveSpeed = 15;
     public float maxPos;
     public bool isHiding;
+    bool invertedControls = false;
     GameManager gameManager;
     ItemSpawner itemSpawner;
     public GameObject kitten;
@@ -52,42 +53,31 @@ public class KittenMovement : MonoBehaviour {
         transform.position = new Vector3 (xPos, transform.position.y, transform.position.z);
     }
 
-    void OnCollisionEnter2D (Collision2D other) {
-        if (other.gameObject.tag == Constants.SNACK_TAG) {
-            gameManager.UpdatePoints ();
-        } else if (other.gameObject.tag == Constants.OBSTACLE_TAG) {
-            gameManager.ReduceLife ();
-        } else if (other.gameObject.tag == Constants.BREAD_TAG) {
-            StartCoroutine (ReduceSpeed ());
-        } else if (other.gameObject.tag == Constants.CATNIP_TAG) {
-            int catnipEffectIdx = Random.Range (0, 2);
-            if (catnipEffectIdx == 0) {
-                StartCoroutine (DoubleSpeed ());
-            } else {
-                StartCoroutine (InvertControls ());
-            }
-        } else if (other.gameObject.tag == Constants.TREAT_TAG) {
-            gameManager.AddLife ();
+    public void UpdateSpeed(bool isFaster) {
+        if (isFaster) {
+            StartCoroutine(DoubleSpeed());
+        } else {
+            StartCoroutine(ReduceSpeed());
         }
-        if (gameManager.points >= gameManager.goalPoints) {
-            gameManager.Win ();
-        }
-        Destroy (other.gameObject);
     }
 
-    IEnumerator ReduceSpeed () {
+    public void TriggerInvertControls() {
+        StartCoroutine(InvertControls());
+    }
+
+    public IEnumerator ReduceSpeed() {
         moveSpeed = 7;
-        yield return new WaitForSeconds (5f);
-        moveSpeed = 15;
+        yield return new WaitForSeconds(5f);
+        moveSpeed = baseMoveSpeed;
     }
 
-    IEnumerator DoubleSpeed () {
+    public IEnumerator DoubleSpeed () {
         moveSpeed = 30;
-        yield return new WaitForSeconds (10f);
-        moveSpeed = 15;
+        yield return new WaitForSeconds (7f);
+        moveSpeed = baseMoveSpeed;
     }
 
-    IEnumerator InvertControls () {
+    public IEnumerator InvertControls () {
         invertedControls = true;
         yield return new WaitForSeconds (10f);
         invertedControls = false;

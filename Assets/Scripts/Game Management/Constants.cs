@@ -8,4 +8,5 @@ public static class Constants {
     public const string BREAD_TAG = "Bread";
     public const string CATNIP_TAG = "Catnip";
     public const string TREAT_TAG = "Treat";
+    public const string PLAYER_TAG = "Player";
 }
