@@ -12,7 +12,7 @@ public class Obstacle : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == Constants.PLAYER_TAG) {
-            gameManager.ReduceLife();
+            gameManager.ReduceLife(1);
         }
 
         Destroy(gameObject);

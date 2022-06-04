@@ -103,8 +103,8 @@ public class GameManager : MonoBehaviour {
         uiManager.UpdatePointsText (points, goalPoints);
     }
 
-    public void ReduceLife () {
-        lives--;
+    public void ReduceLife (int lostLives) {
+        lives = lives < lostLives ? 0 : lives - lostLives;
         uiManager.UpdateLivesText (lives);
     }
 

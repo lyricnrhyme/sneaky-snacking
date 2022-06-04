@@ -13,7 +13,7 @@ public class BoundaryLine : MonoBehaviour {
 
     void OnCollisionEnter2D (Collision2D other) {
         if (other.gameObject.tag == Constants.SNACK_TAG) {
-            gameManager.ReduceLife ();
+            gameManager.ReduceLife (1);
         }
         if (gameManager.lives <= 0) {
             gameManager.GameOver ();
