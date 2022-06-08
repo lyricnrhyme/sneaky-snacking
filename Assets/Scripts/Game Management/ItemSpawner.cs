@@ -22,12 +22,14 @@ public class ItemSpawner : MonoBehaviour {
     public IEnumerator SpawnItem () {
         float xPos = Random.Range (-maxPos, maxPos);
         int randomNum = Random.Range (0, 100);
-        if (randomNum < 5) {
+        if (randomNum < 5 && gameManager.lives < 9) {
             Instantiate (treat, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+        } else if (randomNum < 5) {
+            Instantiate (snack, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
         } else if (randomNum >= 5 && randomNum < 20) {
             int effectIdx = Random.Range (0, effects.Length);
             Instantiate (effects[effectIdx], new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
-        } else if (randomNum >= 20 && randomNum < 50) {
+        } else if (randomNum >= 20 && randomNum < 40) {
             Instantiate (obstacle, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
         } else {
             Instantiate (snack, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);

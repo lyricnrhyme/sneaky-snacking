@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class KittenMovement : MonoBehaviour {
-    int moveSpeed = 15;
-    int baseMoveSpeed = 15;
+    int moveSpeed = 18;
+    int baseMoveSpeed = 18;
     public float maxPos;
     public bool isHiding;
     bool invertedControls = false;
@@ -66,7 +66,7 @@ public class KittenMovement : MonoBehaviour {
     }
 
     public IEnumerator ReduceSpeed() {
-        moveSpeed = 7;
+        moveSpeed = 9;
         yield return new WaitForSeconds(5f);
         moveSpeed = baseMoveSpeed;
     }
