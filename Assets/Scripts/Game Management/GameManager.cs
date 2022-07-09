@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour {
     void Start () {
         Time.timeScale = 1f;
         goalPoints = currentLevel * basePoints;
-        StartCoroutine (DogWarning ());
-        StartCoroutine(HumanWarning());
+        StartCoroutine(Warning());
         uiManager = GetComponent<UIManager> ();
     }
 
@@ -118,17 +117,31 @@ public class GameManager : MonoBehaviour {
         uiManager.UpdatePointsText (points, goalPoints);
     }
 
+    IEnumerator Warning() {
+        int randomEnemy = Random.Range(0,10);
+        if (!gameOver) {
+            if (randomEnemy <= 7) {
+                int randomTime = Random.Range(15, 30);
+                yield return new WaitForSeconds (randomTime);
+                dogWarning.SetActive (true);
+            } else {
+                int randomTime = Random.Range(50, 60);
+                yield return new WaitForSeconds(randomTime);
+                humanWarning.SetActive(true);
+            }
+            StartCoroutine(Warning());
+        }
+    }
+
     IEnumerator DogWarning () {
         int randomTime = Random.Range(15, 30);
         yield return new WaitForSeconds (randomTime);
         dogWarning.SetActive (true);
-        if (!gameOver) StartCoroutine (DogWarning ());
     }
 
     IEnumerator HumanWarning() {
         int randomTime = Random.Range(50, 60);
         yield return new WaitForSeconds(randomTime);
         humanWarning.SetActive(true);
-        if (!gameOver) StartCoroutine(HumanWarning());
     }
 }
