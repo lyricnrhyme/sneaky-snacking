@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour {
                 yield return new WaitForSeconds (randomTime);
                 dogWarning.SetActive (true);
             } else {
-                int randomTime = Random.Range(50, 60);
+                int randomTime = Random.Range(20, 40);
                 yield return new WaitForSeconds(randomTime);
                 humanWarning.SetActive(true);
             }

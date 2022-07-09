@@ -11,7 +11,7 @@ public class Human : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!kittenMovement.isHiding && gameManager.gameOver) {
+        if (!kittenMovement.isHiding && !gameManager.gameOver) {
             gameManager.GameOver();
         }
     }
