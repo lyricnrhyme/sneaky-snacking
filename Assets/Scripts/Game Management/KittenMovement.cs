@@ -34,13 +34,14 @@ public class KittenMovement : MonoBehaviour {
     void Hide() {
         if (Input.GetKeyDown ("w") || Input.GetKeyDown ("up")) {
             isHiding = true;
-            kitten.transform.position = new Vector3 (6.86f, -1.21f, 0f);
+            kitten.transform.position = new Vector3 (7.53f, -1.73f, 0f);
             itemSpawner.DestroyAllItems ();
         } else if (Input.GetKeyDown ("s") || Input.GetKeyDown ("down")) {
             isHiding = false;
             kitten.transform.position = new Vector3 (0f, -3.2118f, 0f);
             StartCoroutine (itemSpawner.SpawnItem ());
         }
+        anim.SetBool("Hiding", isHiding);
     }
 
     void Move () {
