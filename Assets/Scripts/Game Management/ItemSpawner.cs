@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour {
-    public GameObject snack;
-    public GameObject obstacle;
+    public GameObject[] snacks;
+    public GameObject[] obstacles;
     public GameObject[] effects;
     public GameObject treat;
     public string[] tags;
@@ -25,14 +25,17 @@ public class ItemSpawner : MonoBehaviour {
         if (randomNum < 5 && gameManager.lives < 9) {
             Instantiate (treat, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
         } else if (randomNum < 5) {
-            Instantiate (snack, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+            int snackIdx = Random.Range (0, snacks.Length);
+            Instantiate (snacks[snackIdx], new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
         } else if (randomNum >= 5 && randomNum < 20) {
             int effectIdx = Random.Range (0, effects.Length);
             Instantiate (effects[effectIdx], new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
         } else if (randomNum >= 20 && randomNum < 40) {
-            Instantiate (obstacle, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+            int obstacleIdx = Random.Range (0, obstacles.Length);
+            Instantiate (obstacles[obstacleIdx], new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
         } else {
-            Instantiate (snack, new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
+            int snackIdx = Random.Range (0, snacks.Length);
+            Instantiate (snacks[snackIdx], new Vector3 (xPos, transform.position.y, transform.position.z), Quaternion.identity);
         }
 
         yield return new WaitForSeconds (1f);
