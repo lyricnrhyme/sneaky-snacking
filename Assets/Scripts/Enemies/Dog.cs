@@ -12,11 +12,18 @@ public class Dog : MonoBehaviour
 
     bool didDamage = false;
 
+    Animator kittenMovementAnim;
+
+    void Start() {
+        kittenMovementAnim = GameObject.Find("Kitten").GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (!kittenMovement.isHiding && !gameManager.gameOver && !didDamage)
         {
+            kittenMovementAnim.SetTrigger("Scared");
             gameManager.ReduceLife(3);
             didDamage = true;
             if (gameManager.lives == 0) gameManager.GameOver();
