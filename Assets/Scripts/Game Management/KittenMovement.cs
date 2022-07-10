@@ -76,14 +76,18 @@ public class KittenMovement : MonoBehaviour {
     }
 
     public IEnumerator DoubleSpeed () {
+        anim.SetBool("Catnip", true);
         moveSpeed = 30;
         yield return new WaitForSeconds (7f);
+        anim.SetBool("Catnip", false);
         moveSpeed = baseMoveSpeed;
     }
 
     public IEnumerator InvertControls () {
+        anim.SetBool("Catnip", true);
         invertedControls = true;
         yield return new WaitForSeconds (10f);
+        anim.SetBool("Catnip", false);
         invertedControls = false;
     }
 }
