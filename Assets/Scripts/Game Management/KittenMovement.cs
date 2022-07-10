@@ -12,11 +12,13 @@ public class KittenMovement : MonoBehaviour {
     GameManager gameManager;
     ItemSpawner itemSpawner;
     public GameObject kitten;
+    Animator anim;
 
     // Start is called before the first frame update
     void Start () {
         gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
         itemSpawner = GameObject.Find ("ItemSpawner").GetComponent<ItemSpawner> ();
+        anim = GameObject.Find("Kitten").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -66,8 +68,10 @@ public class KittenMovement : MonoBehaviour {
     }
 
     public IEnumerator ReduceSpeed() {
+        anim.SetBool("SlowDown", true);
         moveSpeed = 9;
         yield return new WaitForSeconds(5f);
+        anim.SetBool("SlowDown", false);
         moveSpeed = baseMoveSpeed;
     }
 
