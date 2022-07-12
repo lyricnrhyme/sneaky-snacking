@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour {
     public Text pointsText;
     public Text levelText;
     public Text livesText;
+    public Image[] livesHearts;
 
     public void UpdatePointsText (int points, int goalPoints) {
         pointsText.text = "Points: " + points + "/" + goalPoints;
@@ -19,7 +20,9 @@ public class UIManager : MonoBehaviour {
         levelText.text = "Level: " + currentLevel;
     }
 
-    public void UpdateLivesText (int lives) {
-        livesText.text = "Lives: " + lives;
+    public void UpdateLivesUI (int lives) {
+        for (int i=0; i<livesHearts.Length; i++) {
+            livesHearts[i].enabled = i < lives;
+        }
     }
 }

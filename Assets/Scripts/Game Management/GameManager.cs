@@ -104,12 +104,12 @@ public class GameManager : MonoBehaviour {
 
     public void ReduceLife (int lostLives) {
         lives = lives < lostLives ? 0 : lives - lostLives;
-        uiManager.UpdateLivesText (lives);
+        uiManager.UpdateLivesUI (lives);
     }
 
     public void AddLife () {
         lives++;
-        uiManager.UpdateLivesText (lives);
+        uiManager.UpdateLivesUI (lives);
     }
 
     public void UpdatePoints () {
@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour {
         int randomEnemy = Random.Range(0,10);
         if (!gameOver) {
             if (randomEnemy <= 7) {
+                Debug.Log("DOG WARNING SET OFF");
                 int randomTime = Random.Range(15, 30);
                 yield return new WaitForSeconds (randomTime);
                 dogWarning.SetActive (true);

@@ -7,6 +7,7 @@ public class DogWarning : MonoBehaviour {
 
     private void OnEnable () {
         StartCoroutine (ShowDog ());
+        Debug.Log("SHOW ME PLS");
     }
 
     IEnumerator ShowDog () {
