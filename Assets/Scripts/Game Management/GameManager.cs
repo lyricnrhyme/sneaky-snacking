@@ -121,7 +121,6 @@ public class GameManager : MonoBehaviour {
         int randomEnemy = Random.Range(0,10);
         if (!gameOver) {
             if (randomEnemy <= 7) {
-                Debug.Log("DOG WARNING SET OFF");
                 int randomTime = Random.Range(15, 30);
                 yield return new WaitForSeconds (randomTime);
                 dogWarning.SetActive (true);
