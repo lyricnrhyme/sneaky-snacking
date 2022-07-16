@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class DogWarning : MonoBehaviour {
     public GameObject dog;
     public Image radialTimer;
+    AudioManager audioManager;
     float secondsLeft = 3f;
 
     private void OnEnable () {
+        audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
         StartCoroutine (ShowDog ());
+        
     }
 
     private void Update () {
@@ -20,6 +23,7 @@ public class DogWarning : MonoBehaviour {
     }
 
     IEnumerator ShowDog () {
+        audioManager.PlayWarningSound();
         yield return new WaitForSeconds (secondsLeft);
         dog.SetActive (true);
         gameObject.SetActive (false);

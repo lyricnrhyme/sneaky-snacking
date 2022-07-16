@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     bool gameWin = false;
     public GameObject dogWarning;
     public GameObject humanWarning;
+    AudioManager audioManager;
 
     UIManager uiManager;
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour {
         goalPoints = currentLevel * basePoints;
         StartCoroutine(Warning());
         uiManager = GetComponent<UIManager> ();
+        audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour {
 
     public void WinGame () {
         gameWin = true;
+        audioManager.StopBGMSound();
         uiManager.winPanel.SetActive (true);
         dogWarning.SetActive (false);
         humanWarning.SetActive(false);
@@ -63,12 +66,14 @@ public class GameManager : MonoBehaviour {
     }
 
     void PauseGame () {
+        audioManager.PauseBGMSound();
         uiManager.pausePanel.SetActive (true);
         gamePaused = true;
         Time.timeScale = 0f;
     }
 
     public void ResumeGame () {
+        audioManager.PlayBGMSound();
         uiManager.pausePanel.SetActive (false);
         gamePaused = false;
         Time.timeScale = 1f;
@@ -82,20 +87,25 @@ public class GameManager : MonoBehaviour {
     public void GameOver () {
         gameOver = true;
         Time.timeScale = 0f;
+        audioManager.StopBGMSound();
         uiManager.gameOverPanel.SetActive (true);
         UpdateOverallPoints ();
+        audioManager.PlayGameOverSound();
     }
 
     public void Win () {
+        audioManager.PauseBGMSound();
         uiManager.winPanel.SetActive (true);
         Time.timeScale = 0f;
         UpdateOverallPoints ();
+        audioManager.PlayWinSound();
     }
 
     public void ContinueGame () {
         currentLevel++;
         points = 0;
         goalPoints = currentLevel * basePoints;
+        audioManager.PlayBGMSound();
         uiManager.winPanel.SetActive (false);
         Time.timeScale = 1f;
         uiManager.UpdateLevelText (currentLevel);

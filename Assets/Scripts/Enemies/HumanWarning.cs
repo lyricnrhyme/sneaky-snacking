@@ -7,9 +7,11 @@ public class HumanWarning : MonoBehaviour
 {
     public GameObject human;
     public Image radialTimer;
+    AudioManager audioManager;
     float secondsLeft = 3;
 
     private void OnEnable() {
+        audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
         StartCoroutine(ShowHuman());
     }
 
@@ -21,7 +23,8 @@ public class HumanWarning : MonoBehaviour
     }
 
     IEnumerator ShowHuman() {
-        yield return new WaitForSeconds(3f);
+        audioManager.PlayWarningSound();
+        yield return new WaitForSeconds(secondsLeft);
         human.SetActive(true);
         gameObject.SetActive(false);
         secondsLeft = 3f;

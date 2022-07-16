@@ -9,6 +9,7 @@ public class Human : MonoBehaviour
     ItemSpawner itemSpawner;
     Animator kittenMovementAnim;
     public GameObject kitten;
+    AudioManager audioManager;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +24,7 @@ public class Human : MonoBehaviour
         kittenMovement = GameObject.Find("Kitten").GetComponent<KittenMovement>();
         itemSpawner = GameObject.Find ("ItemSpawner").GetComponent<ItemSpawner> ();
         kittenMovementAnim = GameObject.Find("Kitten").GetComponent<Animator>();
-
+        audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
         StartCoroutine(Disappear());
     }
 
@@ -33,8 +34,10 @@ public class Human : MonoBehaviour
     }
 
     IEnumerator CaughtPlayer() {
+        gameManager.gameOver = true;
         itemSpawner.DestroyAllItems ();
         kittenMovementAnim.SetTrigger("Caught");
+        audioManager.PlayCaughtSound();
         yield return new WaitForSeconds(2f);
         gameManager.GameOver();
     }

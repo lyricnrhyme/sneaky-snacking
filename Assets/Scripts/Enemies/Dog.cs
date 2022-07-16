@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Dog : MonoBehaviour
 {
-    GameManager gameManager;
-
-    KittenMovement kittenMovement;
-
     public GameObject kitten;
-
     bool didDamage = false;
-
+    GameManager gameManager;
+    KittenMovement kittenMovement;
     Animator kittenMovementAnim;
+    AudioManager audioManager;
 
     void Start() {
         kittenMovementAnim = GameObject.Find("Kitten").GetComponent<Animator>();
+        audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
     }
 
     // Update is called once per frame
@@ -23,6 +21,7 @@ public class Dog : MonoBehaviour
     {
         if (!kittenMovement.isHiding && !gameManager.gameOver && !didDamage)
         {
+            audioManager.PlayScaredSound();
             kittenMovementAnim.SetTrigger("Scared");
             gameManager.ReduceLife(3);
             didDamage = true;

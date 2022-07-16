@@ -12,6 +12,7 @@ public class KittenMovement : MonoBehaviour {
     GameManager gameManager;
     ItemSpawner itemSpawner;
     public GameObject kitten;
+    AudioManager audioManager;
     Animator anim;
 
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class KittenMovement : MonoBehaviour {
         gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
         itemSpawner = GameObject.Find ("ItemSpawner").GetComponent<ItemSpawner> ();
         anim = GameObject.Find("Kitten").GetComponent<Animator>();
+        audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
     }
 
     // Update is called once per frame
@@ -36,10 +38,14 @@ public class KittenMovement : MonoBehaviour {
             isHiding = true;
             kitten.transform.position = new Vector3 (7.53f, -1.73f, 0f);
             itemSpawner.DestroyAllItems ();
+            audioManager.PauseBGMSound();
+            audioManager.PlayHidingSound();
         } else if (Input.GetKeyDown ("s") || Input.GetKeyDown ("down")) {
             isHiding = false;
             kitten.transform.position = new Vector3 (0f, -3.2118f, 0f);
             StartCoroutine (itemSpawner.SpawnItem ());
+            audioManager.StopHidingSound();
+            audioManager.PlayBGMSound();
         }
         anim.SetBool("Hiding", isHiding);
     }
@@ -69,6 +75,7 @@ public class KittenMovement : MonoBehaviour {
     }
 
     public IEnumerator ReduceSpeed() {
+        audioManager.PlayBreadSound();
         anim.SetBool("SlowDown", true);
         moveSpeed = 9;
         yield return new WaitForSeconds(5f);
@@ -77,18 +84,26 @@ public class KittenMovement : MonoBehaviour {
     }
 
     public IEnumerator DoubleSpeed () {
+        audioManager.PauseBGMSound();
+        audioManager.PlayCatnipSound();
         anim.SetBool("Catnip", true);
         moveSpeed = 30;
         yield return new WaitForSeconds (7f);
         anim.SetBool("Catnip", false);
         moveSpeed = baseMoveSpeed;
+        audioManager.StopCatnipSound();
+        audioManager.PlayBGMSound();
     }
 
     public IEnumerator InvertControls () {
+        audioManager.PauseBGMSound();
+        audioManager.PlayCatnipSound();
         anim.SetBool("Catnip", true);
         invertedControls = true;
-        yield return new WaitForSeconds (10f);
+        yield return new WaitForSeconds (8f);
         anim.SetBool("Catnip", false);
         invertedControls = false;
+        audioManager.StopCatnipSound();
+        audioManager.PlayBGMSound();
     }
 }
