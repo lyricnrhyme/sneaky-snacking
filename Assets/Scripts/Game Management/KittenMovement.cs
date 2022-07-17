@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class KittenMovement : MonoBehaviour {
     int moveSpeed = 18;
     int baseMoveSpeed = 18;
+    float secondsLeft = 10f;
     public float maxPos;
     public bool isHiding;
     bool invertedControls = false;
     GameManager gameManager;
     ItemSpawner itemSpawner;
     public GameObject kitten;
+    public Image hidingTimer;
     AudioManager audioManager;
     Animator anim;
 
@@ -31,23 +33,37 @@ public class KittenMovement : MonoBehaviour {
             }
             Hide();
         }
+
+        if (isHiding && secondsLeft > 0) {
+            secondsLeft -= Time.deltaTime;
+            hidingTimer.fillAmount = secondsLeft / 10f;
+        } else if (isHiding) {
+            UnHide();
+        }
     }
 
     void Hide() {
         if (Input.GetKeyDown ("w") || Input.GetKeyDown ("up")) {
+            hidingTimer.enabled = true;
             isHiding = true;
             kitten.transform.position = new Vector3 (7.53f, -1.73f, 0f);
             itemSpawner.DestroyAllItems ();
             audioManager.PauseBGMSound();
             audioManager.PlayHidingSound();
         } else if (Input.GetKeyDown ("s") || Input.GetKeyDown ("down")) {
+            UnHide();
+        }
+        anim.SetBool("Hiding", isHiding);
+    }
+
+    void UnHide() {
+            hidingTimer.enabled = false;
             isHiding = false;
             kitten.transform.position = new Vector3 (0f, -3.2118f, 0f);
             StartCoroutine (itemSpawner.SpawnItem ());
             audioManager.StopHidingSound();
             audioManager.PlayBGMSound();
-        }
-        anim.SetBool("Hiding", isHiding);
+            secondsLeft = 10f;
     }
 
     void Move () {
