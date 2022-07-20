@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
 
     void Start() {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        kittenMovementAnim = GameObject.Find("Kitten").GetComponent<Animator>();
+        kittenMovementAnim = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Animator>();
         audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
     }
 

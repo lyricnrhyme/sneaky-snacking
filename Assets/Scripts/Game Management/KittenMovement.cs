@@ -13,7 +13,7 @@ public class KittenMovement : MonoBehaviour {
     GameManager gameManager;
     ItemSpawner itemSpawner;
     public GameObject kitten;
-    public Image hidingTimer;
+    Image hidingTimer;
     AudioManager audioManager;
     Animator anim;
 
@@ -21,8 +21,9 @@ public class KittenMovement : MonoBehaviour {
     void Start () {
         gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
         itemSpawner = GameObject.Find ("ItemSpawner").GetComponent<ItemSpawner> ();
-        anim = GameObject.Find("Kitten").GetComponent<Animator>();
+        anim = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Animator>();
         audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
+        hidingTimer = GameObject.Find("HidingTimer").GetComponent<Image>();
     }
 
     // Update is called once per frame

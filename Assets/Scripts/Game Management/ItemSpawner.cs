@@ -15,7 +15,7 @@ public class ItemSpawner : MonoBehaviour {
     // Start is called before the first frame update
     void Start () {
         gameManager = GameObject.Find ("GameManager").GetComponent<GameManager> ();
-        kittenMovement = GameObject.Find ("Kitten").GetComponent<KittenMovement> ();
+        kittenMovement = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<KittenMovement> ();
         StartCoroutine (SpawnItem ());
     }
 

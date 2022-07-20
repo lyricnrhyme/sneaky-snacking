@@ -12,7 +12,7 @@ public class Dog : MonoBehaviour
     AudioManager audioManager;
 
     void Start() {
-        kittenMovementAnim = GameObject.Find("Kitten").GetComponent<Animator>();
+        kittenMovementAnim = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Animator>();
         audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
     }
 
@@ -35,7 +35,7 @@ public class Dog : MonoBehaviour
         gameManager =
             GameObject.Find("GameManager").GetComponent<GameManager>();
         kittenMovement =
-            GameObject.Find("Kitten").GetComponent<KittenMovement>();
+            GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<KittenMovement>();
 
         StartCoroutine(Disappear());
     }

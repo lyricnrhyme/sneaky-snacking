@@ -9,7 +9,7 @@ public class Catnip : MonoBehaviour
 
     void Start() {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        kittenMovement = GameObject.Find("Kitten").GetComponent<KittenMovement>();
+        kittenMovement = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<KittenMovement>();
     }
 
     void OnCollisionEnter2D(Collision2D other) {

@@ -21,9 +21,9 @@ public class Human : MonoBehaviour
 
     private void OnEnable() {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        kittenMovement = GameObject.Find("Kitten").GetComponent<KittenMovement>();
+        kittenMovement = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<KittenMovement>();
         itemSpawner = GameObject.Find ("ItemSpawner").GetComponent<ItemSpawner> ();
-        kittenMovementAnim = GameObject.Find("Kitten").GetComponent<Animator>();
+        kittenMovementAnim = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Animator>();
         audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
         StartCoroutine(Disappear());
     }
