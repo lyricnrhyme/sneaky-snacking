@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: e026a00bcf2afd341a730d33b0bf699e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7936923053627293107
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_0
+  - first:
+      213: -3695064949162346795
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_1
+  - first:
+      213: 6159054880623058080
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_2
+  - first:
+      213: 6676393092450295267
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_3
+  - first:
+      213: 429556821063053443
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_4
+  - first:
+      213: -503151150952796736
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_5
+  - first:
+      213: 809644887752994508
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_6
+  - first:
+      213: 2196638033833416866
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_7
+  - first:
+      213: 4810540898019993282
+    second: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +140,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd3015377d952e60800000000000000
+      internalID: 7936923053627293107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d67e2b810e78bcc0800000000000000
+      internalID: -3695064949162346795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac5ca728cb597550800000000000000
+      internalID: 6159054880623058080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed1f50052057ac50800000000000000
+      internalID: 6676393092450295267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3803f4227a716f500800000000000000
+      internalID: 429556821063053443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd212ba1b27409f0800000000000000
+      internalID: -503151150952796736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce6ab85cbf6c3b00800000000000000
+      internalID: 809644887752994508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8d0ca47a60c7e10800000000000000
+      internalID: 2196638033833416866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Cheshire_Cat_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c668fb957972c240800000000000000
+      internalID: 4810540898019993282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

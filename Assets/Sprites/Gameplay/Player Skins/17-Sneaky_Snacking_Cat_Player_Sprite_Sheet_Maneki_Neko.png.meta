@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: c28a8d374a4731b4d90baafd869ded63
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2263507874990573495
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_0
+  - first:
+      213: -8909764586160408544
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_1
+  - first:
+      213: -8417151580632761404
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_2
+  - first:
+      213: 9217289582576982484
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_3
+  - first:
+      213: -4659022567884111166
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_4
+  - first:
+      213: -6178202741350302567
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_5
+  - first:
+      213: 6693171096434625337
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_6
+  - first:
+      213: -6021662976161075908
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_7
+  - first:
+      213: 8926303062051774082
+    second: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +140,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94833ec84976690e0800000000000000
+      internalID: -2263507874990573495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028bd8990582a5480800000000000000
+      internalID: -8909764586160408544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb34cfbb35403b80800000000000000
+      internalID: -8417151580632761404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9d8614a046aef70800000000000000
+      internalID: 9217289582576982484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c24db8b8a3d75fb0800000000000000
+      internalID: -4659022567884111166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c787b175d924aa0800000000000000
+      internalID: -6178202741350302567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bc5e776abe2ec50800000000000000
+      internalID: 6693171096434625337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d2cc46d61ce6ca0800000000000000
+      internalID: -6021662976161075908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 17-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Maneki_Neko_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ed313675990eb70800000000000000
+      internalID: 8926303062051774082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

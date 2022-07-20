@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 4be052564d96d80409fae798a1b56710
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 618804454635358618
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_0
+  - first:
+      213: 5983726778836416773
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_1
+  - first:
+      213: -7382410070805551012
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_2
+  - first:
+      213: 623265086324904863
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_3
+  - first:
+      213: 5509910418918559788
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_4
+  - first:
+      213: -5912204146066884106
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_5
+  - first:
+      213: 657505879428456509
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_6
+  - first:
+      213: 2827193772182173691
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_7
+  - first:
+      213: -3556505194825967751
+    second: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +140,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9948f77f5f669800800000000000000
+      internalID: 618804454635358618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509798d5dc77a0350800000000000000
+      internalID: 5983726778836416773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c586e5f77296c8990800000000000000
+      internalID: -7382410070805551012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f939c473b4846a800800000000000000
+      internalID: 623265086324904863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c205ddf4552277c40800000000000000
+      internalID: 5509910418918559788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9771247a1a3fda0800000000000000
+      internalID: -5912204146066884106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30601d1d1eef1900800000000000000
+      internalID: 657505879428456509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf77d16b1c53c3720800000000000000
+      internalID: 2827193772182173691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Astrid_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97711945e51c4aec0800000000000000
+      internalID: -3556505194825967751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: cf2a2a3d92c521b47ab38f000a138073
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7728216665219353445
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_0
+  - first:
+      213: 1345311677168428342
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_1
+  - first:
+      213: 5278363488082990802
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_2
+  - first:
+      213: -6596445068995085615
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_3
+  - first:
+      213: -9075314019295640512
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_4
+  - first:
+      213: -9103893522289022740
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_5
+  - first:
+      213: 279068868422886921
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_6
+  - first:
+      213: 7255004247167230195
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_7
+  - first:
+      213: 658116699169871012
+    second: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +140,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94b85a83ebdfb490800000000000000
+      internalID: -7728216665219353445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6352fc5b7d18ba210800000000000000
+      internalID: 1345311677168428342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6149e50a3804940800000000000000
+      internalID: 5278363488082990802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dabb22c828b474a0800000000000000
+      internalID: -6596445068995085615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044c2c68bf10e0280800000000000000
+      internalID: -9075314019295640512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8abf2731978a180800000000000000
+      internalID: -9103893522289022740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906673248a37fd300800000000000000
+      internalID: 279068868422886921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f06a549ce3fea460800000000000000
+      internalID: 7255004247167230195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Garfield_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4d5caa6a9122900800000000000000
+      internalID: 658116699169871012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

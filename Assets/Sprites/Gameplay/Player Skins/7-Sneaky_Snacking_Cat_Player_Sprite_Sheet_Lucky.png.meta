@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 5850e3a8dcde193499c49dbf6418dec7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6595082665297577713
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_0
+  - first:
+      213: 6107054770120850918
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_1
+  - first:
+      213: -4919358034700983002
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_2
+  - first:
+      213: 8856700226756125935
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_3
+  - first:
+      213: 2228147091840860866
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_4
+  - first:
+      213: 4819511274939298545
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_5
+  - first:
+      213: 2537420260248349762
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_6
+  - first:
+      213: 4813945245032992407
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_7
+  - first:
+      213: -8309087590132735973
+    second: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +140,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f60669edb0768b50800000000000000
+      internalID: 6595082665297577713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed78e4f4fd90c450800000000000000
+      internalID: 6107054770120850918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6252faa6eedeabbb0800000000000000
+      internalID: -4919358034700983002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4abe17ee159ea70800000000000000
+      internalID: 8856700226756125935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c28e7c89f7fbee10800000000000000
+      internalID: 2228147091840860866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f23fbd38f752e240800000000000000
+      internalID: 4819511274939298545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c6bf9684ab63320800000000000000
+      internalID: 2537420260248349762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e4f5ae1b19ec240800000000000000
+      internalID: 4813945245032992407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Lucky_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1028863cd030bc80800000000000000
+      internalID: -8309087590132735973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

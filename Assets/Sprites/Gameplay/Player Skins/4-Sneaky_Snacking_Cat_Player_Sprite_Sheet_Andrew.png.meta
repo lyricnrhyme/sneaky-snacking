@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 985759df385c21d4cb5aa1a7a7dfbb81
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5892238511979029852
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_0
+  - first:
+      213: -3098101455434813576
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_1
+  - first:
+      213: 4086326207765229307
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_2
+  - first:
+      213: 2329822372229061540
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_3
+  - first:
+      213: 6219341020894884876
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_4
+  - first:
+      213: -7699926931493485241
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_5
+  - first:
+      213: 7404702549068861676
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_6
+  - first:
+      213: 5944029431910821905
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_7
+  - first:
+      213: -6935243714688921757
+    second: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +140,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55e26e45bf65c150800000000000000
+      internalID: 5892238511979029852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fefa604255105d0800000000000000
+      internalID: -3098101455434813576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe2732290c85b830800000000000000
+      internalID: 4086326207765229307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab98768a11355020800000000000000
+      internalID: 2329822372229061540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04747ff4b98f4650800000000000000
+      internalID: 6219341020894884876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7450ed3704d542590800000000000000
+      internalID: -7699926931493485241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0dda09cb9c2c660800000000000000
+      internalID: 7404702549068861676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110f287864f6d7250800000000000000
+      internalID: 5944029431910821905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Andrew_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fc433069011cf90800000000000000
+      internalID: -6935243714688921757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

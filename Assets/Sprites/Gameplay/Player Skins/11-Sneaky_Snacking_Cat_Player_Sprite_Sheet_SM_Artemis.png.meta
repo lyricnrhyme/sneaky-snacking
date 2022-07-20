@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 2c1774cd105349d4d81d95b9af65a1f7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8949313854229943868
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_0
+  - first:
+      213: 7602081830691886016
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_1
+  - first:
+      213: -8121374354114157405
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_2
+  - first:
+      213: -2654866461920134817
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_3
+  - first:
+      213: -7218689748636772357
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_4
+  - first:
+      213: 1127478009356092917
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_5
+  - first:
+      213: -2891596772716805191
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_6
+  - first:
+      213: 2840849163550744909
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_7
+  - first:
+      213: -7597892960741228160
+    second: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +140,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9642f0776adc380800000000000000
+      internalID: -8949313854229943868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c357dfb525008960800000000000000
+      internalID: 7602081830691886016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1000
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4ee07cd051b4f80800000000000000
+      internalID: -8121374354114157405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59f62bd405082bd0800000000000000
+      internalID: -2654866461920134817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf750cc7bef02db90800000000000000
+      internalID: -7218689748636772357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f50cbf964b95af00800000000000000
+      internalID: 1127478009356092917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b38c883e0cfed7d0800000000000000
+      internalID: -2891596772716805191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4168e54349bc6720800000000000000
+      internalID: 2840849163550744909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11-Sneaky_Snacking_Cat_Player_Sprite_Sheet_SM_Artemis_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08104998b9cde8690800000000000000
+      internalID: -7597892960741228160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
