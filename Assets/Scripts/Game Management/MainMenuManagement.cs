@@ -8,14 +8,6 @@ public class MainMenuManagement : MonoBehaviour {
     public GameObject howToPlayPanel;
     public GameObject shopPanel;
     public GameObject creditsPanel;
-    public Text overallPointsText;
-
-    int overallPoints;
-
-    void Start () {
-        overallPoints = PlayerPrefs.GetInt ("OverallPoints", 0);
-        overallPointsText.text = "Points: " + overallPoints;
-    }
 
     public void NavigateToGamePlay () {
         SceneManager.LoadScene ("GamePlay");
