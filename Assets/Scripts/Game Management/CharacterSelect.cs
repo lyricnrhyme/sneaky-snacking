@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class CharacterSelect : MonoBehaviour
 {
     public Character[] characters;
+    public Pronoun[] pronouns;
     public Sprite[] selectCharacters;
     public Sprite[] howToPlayCharacters;
     public Image selectImage;
     public Image howToPlayImage;
     public Text characterInfoText;
+    public Text howToPlayText;
     public Text selectCharacterText;
     public Text overallPointsText;
     public Button selectCharacterButton;
@@ -56,7 +58,13 @@ public class CharacterSelect : MonoBehaviour
     public void UpdateSelectedCharacterUI() {
         UpdateCurrentCharacterUI();
         howToPlayImage.sprite = howToPlayCharacters[selectedCharacter];
-        // update how to play text
+        UpdateHowToPlayText();
+    }
+
+    public void UpdateHowToPlayText() {
+        string catName = characters[selectedCharacter].name;
+        Pronoun catPronouns = pronouns[characters[selectedCharacter].pronouns];
+        howToPlayText.text = $"HOW TO PLAY: {catName} the cat LOVES food, and {catPronouns.pronoun} doesn't want to wait for {catPronouns.possessive} dinner (HMP!) Help {catName} rummage the kitchen to reach {catPronouns.possessive} chonky potential! \n \n Catch the falling food while avoiding anything that may spook {catName}. Make sure to hide from the doggo and hooman or it's game over!";
     }
 
     public void SelectCharacter() {
