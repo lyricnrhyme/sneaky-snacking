@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour {
     IEnumerator Warning() {
         int randomEnemy = Random.Range(0,10);
         if (!gameOver) {
-            if (randomEnemy <= 7) {
+            if (randomEnemy <= 1) {
                 int randomTime = Random.Range(15, 30);
                 yield return new WaitForSeconds (randomTime);
                 dogWarning.SetActive (true);

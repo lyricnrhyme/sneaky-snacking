@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: b25642635a6afdc45a1316e0caebe3d8
+guid: da37dc8c1fb310346b4430ade493c0b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5474812530784172087
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_0
+      213: 8730041958760189792
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_0
   - first:
-      213: -6210085831675428020
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_1
+      213: -8330220142609198102
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_1
   - first:
-      213: 7737363277054175752
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_2
+      213: 2439321502098742895
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_2
   - first:
-      213: -1160733010490985029
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_3
+      213: -9166788218386535895
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_3
   - first:
-      213: -3287802187381838105
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_4
+      213: 7094850364584254247
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_4
   - first:
-      213: -1676006253374364860
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_5
+      213: 429292010174944521
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_5
   - first:
-      213: -7020773196525290173
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_6
+      213: -7141604704428578164
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_6
   - first:
-      213: -3052144780288363031
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_7
+      213: -8921029701411106193
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_7
   - first:
-      213: 8203989683325910250
-    second: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_8
+      213: -2615849489991253049
+    second: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_0
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_0
       rect:
         serializedVersion: 2
         x: 0
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7387f3d6df07afb40800000000000000
-      internalID: 5474812530784172087
+      spriteID: 06f082268e6572970800000000000000
+      internalID: 8730041958760189792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_1
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_1
       rect:
         serializedVersion: 2
         x: 450
@@ -177,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c43cc4aa6d751d9a0800000000000000
-      internalID: -6210085831675428020
+      spriteID: ae399fa6aec156c80800000000000000
+      internalID: -8330220142609198102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_2
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_2
       rect:
         serializedVersion: 2
         x: 900
@@ -198,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80a67faf7e2a06b60800000000000000
-      internalID: 7737363277054175752
+      spriteID: f6e51996bf53ad120800000000000000
+      internalID: 2439321502098742895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_3
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_3
       rect:
         serializedVersion: 2
         x: 0
@@ -219,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb57d9e0a7f34efe0800000000000000
-      internalID: -1160733010490985029
+      spriteID: 92aa5dfdea609c080800000000000000
+      internalID: -9166788218386535895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_4
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_4
       rect:
         serializedVersion: 2
         x: 450
@@ -240,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ee6a5184516f52d0800000000000000
-      internalID: -3287802187381838105
+      spriteID: 72b589301d8f57260800000000000000
+      internalID: 7094850364584254247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_5
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_5
       rect:
         serializedVersion: 2
         x: 900
@@ -261,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 443a9424131adb8e0800000000000000
-      internalID: -1676006253374364860
+      spriteID: 905146b0fc625f500800000000000000
+      internalID: 429292010174944521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_6
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_6
       rect:
         serializedVersion: 2
         x: 0
@@ -282,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34db684b9f3319e90800000000000000
-      internalID: -7020773196525290173
+      spriteID: c8aa642fb5ce3ec90800000000000000
+      internalID: -7141604704428578164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_7
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_7
       rect:
         serializedVersion: 2
         x: 450
@@ -303,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e579d74e7a94a5d0800000000000000
-      internalID: -3052144780288363031
+      spriteID: f629ea090c2223480800000000000000
+      internalID: -8921029701411106193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16-Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_8
+      name: Sneaky_Snacking_Cat_Player_Sprite_Sheet_Hello_Kitty_8
       rect:
         serializedVersion: 2
         x: 900
@@ -324,8 +324,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aec3c9f762d6ad170800000000000000
-      internalID: 8203989683325910250
+      spriteID: 7c34f2b8fb2a2bbd0800000000000000
+      internalID: -2615849489991253049
       vertices: []
       indices: 
       edges: []
