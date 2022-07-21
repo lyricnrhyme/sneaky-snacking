@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterManager : MonoBehaviour
+public class CharacterSpawner : MonoBehaviour
 {
     public GameObject[] kittenPlayers;
     public Sprite[] pauseSprites;
