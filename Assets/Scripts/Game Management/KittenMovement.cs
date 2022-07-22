@@ -8,6 +8,7 @@ public class KittenMovement : MonoBehaviour {
     int baseMoveSpeed = 18;
     float secondsLeft = 10f;
     public float maxPos;
+    public bool isOnCatnip = false;
     public bool isHiding;
     bool invertedControls = false;
     GameManager gameManager;
@@ -50,6 +51,7 @@ public class KittenMovement : MonoBehaviour {
             kitten.transform.position = new Vector3 (7.53f, -1.73f, 0f);
             itemSpawner.DestroyAllItems ();
             audioManager.PauseBGMSound();
+            audioManager.StopCatnipSound();
             audioManager.PlayHidingSound();
         } else if (Input.GetKeyDown ("s") || Input.GetKeyDown ("down")) {
             UnHide();
@@ -63,7 +65,11 @@ public class KittenMovement : MonoBehaviour {
             kitten.transform.position = new Vector3 (0f, -3.2118f, 0f);
             StartCoroutine (itemSpawner.SpawnItem ());
             audioManager.StopHidingSound();
-            audioManager.PlayBGMSound();
+            if (isOnCatnip) {
+                audioManager.PlayCatnipSound();
+            } else {
+                audioManager.PlayBGMSound();
+            }
             secondsLeft = 10f;
     }
 
@@ -101,26 +107,37 @@ public class KittenMovement : MonoBehaviour {
     }
 
     public IEnumerator DoubleSpeed () {
-        audioManager.PauseBGMSound();
-        audioManager.PlayCatnipSound();
-        anim.SetBool("Catnip", true);
+        StartCatnipEffect();
         moveSpeed = 30;
         yield return new WaitForSeconds (7f);
         anim.SetBool("Catnip", false);
         moveSpeed = baseMoveSpeed;
-        audioManager.StopCatnipSound();
-        audioManager.PlayBGMSound();
+        ResumeSoundAfterCatnip();
     }
 
     public IEnumerator InvertControls () {
-        audioManager.PauseBGMSound();
-        audioManager.PlayCatnipSound();
-        anim.SetBool("Catnip", true);
+        StartCatnipEffect();
         invertedControls = true;
         yield return new WaitForSeconds (8f);
         anim.SetBool("Catnip", false);
         invertedControls = false;
+        ResumeSoundAfterCatnip();
+    }
+
+    void StartCatnipEffect() {
+        isOnCatnip = true;
+        audioManager.PauseBGMSound();
+        audioManager.PlayCatnipSound();
+        anim.SetBool("Catnip", true);
+    }
+
+    void ResumeSoundAfterCatnip() {
+        if (isHiding) {
+            audioManager.PlayHidingSound();
+        } else {
+            audioManager.PlayBGMSound();
+        }
         audioManager.StopCatnipSound();
-        audioManager.PlayBGMSound();
+        isOnCatnip = false;
     }
 }

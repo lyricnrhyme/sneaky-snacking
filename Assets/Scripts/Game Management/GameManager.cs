@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(Warning());
         uiManager = GetComponent<UIManager> ();
         audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();
+        audioManager.PlayBGMSound();
     }
 
     // Update is called once per frame
@@ -41,7 +42,7 @@ public class GameManager : MonoBehaviour {
 
     public void WinGame () {
         gameWin = true;
-        audioManager.StopBGMSound();
+        audioManager.StopSounds();
         uiManager.winPanel.SetActive (true);
         dogWarning.SetActive (false);
         humanWarning.SetActive(false);
@@ -66,14 +67,14 @@ public class GameManager : MonoBehaviour {
     }
 
     void PauseGame () {
-        audioManager.PauseBGMSound();
+        audioManager.StopSounds();
         uiManager.pausePanel.SetActive (true);
         gamePaused = true;
         Time.timeScale = 0f;
     }
 
     public void ResumeGame () {
-        audioManager.PlayBGMSound();
+        audioManager.StartSounds();
         uiManager.pausePanel.SetActive (false);
         gamePaused = false;
         Time.timeScale = 1f;
@@ -87,25 +88,33 @@ public class GameManager : MonoBehaviour {
     public void GameOver () {
         gameOver = true;
         Time.timeScale = 0f;
-        audioManager.StopBGMSound();
+        audioManager.StopSounds();
         uiManager.gameOverPanel.SetActive (true);
         UpdateOverallPoints ();
         audioManager.PlayGameOverSound();
     }
 
     public void Win () {
-        audioManager.PauseBGMSound();
+        ResetEnemyWarnings();
+        audioManager.StopSounds();
         uiManager.winPanel.SetActive (true);
         Time.timeScale = 0f;
         UpdateOverallPoints ();
         audioManager.PlayWinSound();
     }
 
+    public void ResetEnemyWarnings() {
+        dogWarning.SetActive(false);
+        dogWarning.GetComponent<DogWarning>().secondsLeft = 3f;
+        humanWarning.SetActive(false);
+        humanWarning.GetComponent<HumanWarning>().secondsLeft = 3f;
+    }
+
     public void ContinueGame () {
         currentLevel++;
         points = 0;
         goalPoints = currentLevel * basePoints;
-        audioManager.PlayBGMSound();
+        audioManager.StartSounds();
         uiManager.winPanel.SetActive (false);
         Time.timeScale = 1f;
         uiManager.UpdateLevelText (currentLevel);

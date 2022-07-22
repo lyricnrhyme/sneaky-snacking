@@ -8,7 +8,8 @@ public class HumanWarning : MonoBehaviour
     public GameObject human;
     public Image radialTimer;
     AudioManager audioManager;
-    float secondsLeft = 3;
+    [HideInInspector]
+    public float secondsLeft = 3f;
 
     private void OnEnable() {
         audioManager = GameObject.Find ("AudioManager").GetComponent<AudioManager> ();

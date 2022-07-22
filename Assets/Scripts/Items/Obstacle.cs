@@ -19,6 +19,7 @@ public class Obstacle : MonoBehaviour
             audioManager.PlayScaredSound();
             kittenMovementAnim.SetTrigger("Scared");
             gameManager.ReduceLife(1);
+            if (gameManager.lives == 0) gameManager.GameOver();
         }
 
         Destroy(gameObject);

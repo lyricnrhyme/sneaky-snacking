@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -16,21 +17,38 @@ public class AudioManager : MonoBehaviour
     public AudioSource healthSound;
     public AudioSource breadSound;
     public AudioSource BGMSound;
+    public Image musicOffIcon;
+    public Image soundEffectsOffIcon;
+    bool isMusicOn;
+    bool isSoundEffectsOn;
+    KittenMovement kittenMovement;
+
+    void Awake() {
+        isMusicOn = PlayerPrefs.GetInt("IsMusicOn", 1) == 1 ? true : false;
+        isSoundEffectsOn = PlayerPrefs.GetInt("IsSoundEffectsOn", 1) == 1 ? true : false;
+        musicOffIcon.enabled = !isMusicOn;
+        soundEffectsOffIcon.enabled = !isSoundEffectsOn;
+    }
+
+    void Start() {
+        if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
+        kittenMovement = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<KittenMovement> ();
+    }
 
     public void PlayGameOverSound() {
-        gameOverSound.Play();
+        if (isSoundEffectsOn) gameOverSound.Play();
     }
 
     public void PlayWinSound() {
-        winSound.Play();
+        if (isSoundEffectsOn) winSound.Play();
     }
 
     public void PlayClickSound() {
-        clickSound.Play();
+        if (isSoundEffectsOn) clickSound.Play();
     }
 
     public void PlayHidingSound() {
-        hidingSound.Play();
+        if (isMusicOn) hidingSound.Play();
     }
 
     public void StopHidingSound() {
@@ -38,19 +56,19 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlayCaughtSound() {
-        caughtSound.Play();
+        if (isSoundEffectsOn) caughtSound.Play();
     }
 
     public void PlayWarningSound() {
-        warningSound.Play();
+        if (isSoundEffectsOn) warningSound.Play();
     }
 
     public void PlayPointsSound() {
-        pointsSound.Play();
+        if (isSoundEffectsOn) pointsSound.Play();
     }
 
     public void PlayCatnipSound() {
-        catnipSound.Play();
+        if (isMusicOn) catnipSound.Play();
     }
 
     public void StopCatnipSound() {
@@ -58,19 +76,19 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlayScaredSound() {
-        scaredSound.Play();
+        if (isSoundEffectsOn) scaredSound.Play();
     }
 
     public void PlayHealthSound() {
-        healthSound.Play();
+        if (isSoundEffectsOn) healthSound.Play();
     }
 
     public void PlayBreadSound() {
-        breadSound.Play();
+        if (isSoundEffectsOn) breadSound.Play();
     }
 
     public void PlayBGMSound() {
-        BGMSound.Play();
+        if (isMusicOn) BGMSound.Play();
     }
 
     public void PauseBGMSound() {
@@ -79,5 +97,38 @@ public class AudioManager : MonoBehaviour
 
     public void StopBGMSound() {
         BGMSound.Stop();
+    }
+
+    public void ToggleMusic() {
+        isMusicOn = !isMusicOn;
+        PlayerPrefs.SetInt("IsMusicOn", isMusicOn ? 1 : 0);
+        musicOffIcon.enabled = !isMusicOn;
+    }
+
+    public void ToggleSoundEffects() {
+        isSoundEffectsOn = !isSoundEffectsOn;
+        PlayerPrefs.SetInt("IsSoundEffectsOn", isSoundEffectsOn ? 1 : 0);
+        soundEffectsOffIcon.enabled = !isSoundEffectsOn;
+    }
+
+    public void StartSounds() {
+        if (kittenMovement.isHiding) {
+            PlayHidingSound();
+        } else if (kittenMovement.isOnCatnip) {
+            PlayCatnipSound();
+        } else {
+            PlayBGMSound();
+        }
+    }
+
+    public void StopSounds() {
+        StopBGMSound();
+        StopHidingSound();
+        StopCatnipSound();
+    }
+
+    public void HandleSoundsAfterResume() {
+        StopSounds();
+        StartSounds();
     }
 }
